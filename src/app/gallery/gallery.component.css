@@ -132,7 +132,7 @@
   }
   
   /* Mobile Styles */
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1500px) {
     .gallery {
       display: flex;
       flex-wrap:wrap;
