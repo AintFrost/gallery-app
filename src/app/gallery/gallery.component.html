@@ -1,0 +1,29 @@
+<div class="header">
+    <h1>Gallery</h1>
+  </div>
+  
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let image of images" (click)="onSelect(image)">
+      <img [src]="image.url" alt="Image {{image.id}}">
+    </div>
+  </div>
+  
+  <div class="add-image">
+    <input #imageUrl placeholder="Image URL">
+    <button (click)="addImage(imageUrl.value, false)"><i class="fas fa-plus"></i> Add Image</button>
+  </div>
+  
+  <div class="selected-image" *ngIf="selectedImage">
+    <div class="selected-image-container">
+      <img [src]="selectedImage.url" alt="Image {{selectedImage.id}}">
+      <div class="nav-buttons">
+        <button (click)="goPrev()"><i class="fas fa-chevron-left"></i> Prev</button>
+        <button (click)="goNext()">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="button-group">
+        <button class="back-button" (click)="selectedImage = undefined"><i class="fas fa-times"></i> Back</button>
+        <button class="delete-button" (click)="deleteImage(selectedImage)"><i class="fas fa-trash"></i> Delete Image</button>
+      </div>
+    </div>
+  </div>
+  

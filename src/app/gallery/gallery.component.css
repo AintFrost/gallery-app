@@ -1,0 +1,204 @@
+.header {
+    background-color: #dddcdc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    width: calc((100% - 20px) / 3);
+    height: 0;
+    padding-bottom: calc((100% - 20px) / 3);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .add-image {
+    margin-top:10px;
+  }
+  
+  .selected-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selected-image-container {
+    width: 360px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selected-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .nav-buttons button {
+    padding: 5px 10px;
+    border: none;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .back-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .button-group button {
+    padding: 5px 10px;
+    border: none;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .button-group button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 500px) {
+    .gallery {
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+  
+    .gallery-item {
+      width: calc((100% - 10px) / 3);
+      height: 0;
+      padding-bottom: calc((100% - 10px) / 3);
+      margin-bottom: 5px;
+    }
+  
+    .add-image {
+      margin-top: 5px;
+    }
+  
+    .selected-image-container {
+      max-width: 100%;
+      max-height: 100%;
+      padding: 10px;
+    }
+  
+    .selected-image-container img {
+      max-width: 100%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+  
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5px;
+    }
+  
+    .nav-buttons button {
+      margin-top: 5px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav-buttons button i {
+      margin-right: 5px;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5px;
+    }
+  
+    .button-group button {
+      margin-top: 5px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .button-group button i {
+      margin-right: 5px;
+    }
+  }
+  

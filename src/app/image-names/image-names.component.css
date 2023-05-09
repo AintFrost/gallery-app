@@ -1,0 +1,21 @@
+.image-names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .image-name {
+    width: 100px;
+    height: 50px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .image-name:hover {
+    background-color: #e0e0e0;
+  }
+  
